@@ -1,0 +1,40 @@
+# KingPredict Deployment Requirements
+
+# --- Core Web Framework ---
+Flask==3.0.3
+python-dotenv==1.0.1
+
+# --- Flask Extensions ---
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.3
+Flask-Migrate==4.0.7
+Flask-SQLAlchemy==3.1.1
+Flask-WTF==1.2.1
+
+# --- Database & ORM ---
+SQLAlchemy==2.0.30
+# Alembic is a dependency of Flask-Migrate, included for clarity
+alembic==1.13.1
+
+# --- Data Science & Machine Learning ---
+pandas==2.2.2
+numpy==1.26.4
+scikit-learn==1.6.1
+joblib==1.4.2
+
+# --- Form Handling ---
+# WTForms is a dependency of Flask-WTF, included for clarity
+WTForms==3.1.2
+
+# --- Background Task Scheduling ---
+APScheduler==3.10.4
+
+# --- Production WSGI Server ---
+# The default Flask server is for development ONLY.
+# Gunicorn is a standard choice for production on Linux/macOS.
+gunicorn==22.0.0
+
+# --- Database Driver (Choose one for production) ---
+# Your current code uses SQLite, which is built-in.
+# For production (e.g., PostgreSQL on Heroku/Render), you would uncomment and use a driver like this:
+# psycopg2-binary==2.9.9
